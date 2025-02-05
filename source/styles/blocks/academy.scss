@@ -1,0 +1,51 @@
+.academy {
+  text-decoration: none;
+  color: $special-dark-grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:focus-visible {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: $basic-green;
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 23px;
+    padding-bottom: 6px;
+  }
+}
+
+/* если делала optimize, то надо удалить fill в svg */
+.academy__logo {
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:focus-visible {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: $basic-green;
+    opacity: 0.3;
+  }
+}
+
+.academy__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special-dark-grey;
+  letter-spacing: 0;
+  text-align: left;
+}

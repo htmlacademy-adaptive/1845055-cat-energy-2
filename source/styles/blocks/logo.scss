@@ -1,0 +1,28 @@
+.logo {
+  background-color: $basic-white;
+  width: 190px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 13px;
+    width: 174px;
+  }
+}
+
+.logo__logo-image--text {
+  @media screen and (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}

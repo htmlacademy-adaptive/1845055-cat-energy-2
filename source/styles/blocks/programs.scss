@@ -1,0 +1,235 @@
+.programs {
+  padding-top: 17px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 82px;
+  }
+}
+
+.programs_wrapper {
+  max-width: 100%;
+}
+
+.programs__list {
+  @include list-reset();
+  display: flex;
+  flex-flow: column wrap;
+  gap: 19px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 20px 80px;
+    justify-content: space-between;
+  }
+}
+
+.programs__item {
+  background-color: $basic-grey;
+  padding: 24px 20px 19px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 73px 53px 58px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  color: $basic-black;
+  letter-spacing: 0;
+  text-align: left;
+  padding-left: 70px;
+  padding-top: 6px;
+  font-weight: 400;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0;
+
+  &::before {
+    content: "";
+    background-color: $basic-green;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/stack.svg#cat-slim");
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: -3px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 0;
+    padding-top: 4px;
+
+    &::before {
+      left: 65%;
+      top: 19px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      width: 141px;
+      height: 194px;
+      left: 70%;
+      top: 8px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: left;
+    padding-bottom: 50px;
+    padding-left: 160px;
+
+    &::before {
+      left: 0;
+      top: -30%;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 97px;
+      left: 14px;
+      top: -32px;
+    }
+  }
+}
+
+.programs__title--second {
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/stack.svg#cat-pro");
+    width: 68px;
+    height: 53px;
+    left: -10px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    &::after {
+      width: 273px;
+      height: 113px;
+      left: 59%;
+      top: 158%;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &::after {
+      width: 134px;
+      height: 56px;
+      left: -20px;
+      top: -6px;
+    }
+  }
+}
+
+.programs__description {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special-dark-grey;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 0 0 15px;
+  padding: 30px 0 22px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 340px;
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $basic-black;
+    margin-bottom: 35px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 457px;
+    min-height: 95px;
+    margin-bottom: 33px;
+  }
+}
+
+.programs__link {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-black;
+  letter-spacing: 0;
+  text-align: center;
+  position: relative;
+  background-color: $basic-grey;
+  padding: 15px 0;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid $basic-grey-2;
+    width: 240px;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/stack.svg#arrow-right");
+    width: 35px;
+    height: 12px;
+    top: 39%;
+    left: 118%;
+  }
+
+  &:hover::after {
+    background-image: url("../../icons/stack.svg#arrow-right-big");
+  }
+
+  &:active::after {
+    background-image: url("../../icons/stack.svg#arrow-right-big");
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &::before {
+      border-top: none;
+    }
+
+    &::after {
+      top: 40%;
+      left: 123%;
+    }
+  }
+}
